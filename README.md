@@ -5,5 +5,6 @@ counterpart has moved the data.
 
 ## Workflow:
  - Edit
+ - run `PYTHONPATH=. pytest tests/`
  - perform `make build`
  - commit

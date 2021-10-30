@@ -7,9 +7,9 @@ def test_prepare():
     excludes = ['excl_a', 'excl_b']
     options = ['-v']
 
-    cmdline = ['rsync', '-a', '--itemize-changes', '--delete-after', '--exclude=excl_a', '--exclude=excl_b', '-v', 'src', 'dst']
+    cmdline = ['rsync', '-rltDi', '--itemize-changes', '--delete-after', '--exclude=excl_a', '--exclude=excl_b', '-v', 'src', 'dst']
     cmdline_dry = [
-        'rsync', '-a', '--itemize-changes', '--delete-after',
+        'rsync', '-rltDi', '--itemize-changes', '--delete-after',
         '--dry-run', '--exclude=excl_a', '--exclude=excl_b',
         '-v', 'src', 'dst'
     ]
